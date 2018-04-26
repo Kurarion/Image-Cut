@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/Qt_Vision_2">
+        <file>Z:/素材/头像.png</file>
+        <file>icons/icon.ico</file>
+        <file>icons/icon.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Qt_Vision_2Class</class>
+ <widget class="QMainWindow" name="Qt_Vision_2Class">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>898</width>
+    <height>590</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::NoFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>图片剪刀</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Qt_Vision_2.qrc">
+    <normaloff>:/Qt_Vision_2/Z:/素材/头像.png</normaloff>:/Qt_Vision_2/Z:/素材/头像.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pushButton_open">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>510</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>原图打开</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_cut">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>510</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>分割</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_exit">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>510</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>退出</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>901</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>901</width>
+      <height>501</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>901</width>
+      <height>501</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_help">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>510</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>帮助</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_preview">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>510</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>预览分割</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_close">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>510</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>关闭图片窗口</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio_auto">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>520</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>魔术棒（快捷键Z）</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio_hand">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>520</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>手动连线（快捷键X）</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>898</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionopen_file">
+   <property name="text">
+    <string>打开图片文件夹</string>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>分割结果另存为</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Qt_Vision_2.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_help</sender>
+   <signal>clicked()</signal>
+   <receiver>Qt_Vision_2Class</receiver>
+   <slot>onHelpButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>700</x>
+     <y>575</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>377</x>
+     <y>572</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_open</sender>
+   <signal>clicked()</signal>
+   <receiver>Qt_Vision_2Class</receiver>
+   <slot>onOpenButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>390</x>
+     <y>575</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>590</x>
+     <y>579</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_cut</sender>
+   <signal>clicked()</signal>
+   <receiver>Qt_Vision_2Class</receiver>
+   <slot>onOpenZoomButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>590</x>
+     <y>575</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>698</x>
+     <y>576</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_exit</sender>
+   <signal>clicked()</signal>
+   <receiver>Qt_Vision_2Class</receiver>
+   <slot>onExit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>838</x>
+     <y>560</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>802</x>
+     <y>578</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_preview</sender>
+   <signal>clicked()</signal>
+   <receiver>Qt_Vision_2Class</receiver>
+   <slot>onPreview()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>440</x>
+     <y>575</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>553</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_close</sender>
+   <signal>clicked()</signal>
+   <receiver>Qt_Vision_2Class</receiver>
+   <slot>onCloseWindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>645</x>
+     <y>553</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>270</x>
+     <y>538</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onHelpButton()</slot>
+  <slot>onOpenZoomButton()</slot>
+  <slot>onOpenButton()</slot>
+  <slot>onCutButton()</slot>
+  <slot>onExit()</slot>
+  <slot>onPreview()</slot>
+  <slot>onCloseWindow()</slot>
+ </slots>
+</ui>
